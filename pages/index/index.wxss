@@ -1,0 +1,4 @@
+/**index.wxss**/
+.num-input{
+  border: solid;
+}

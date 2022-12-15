@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<script>
+    let product = {
+        price: 10,
+        num: 5
+    }
+    let total = 0
+
+    function getTotal(product) {
+        return product.price * product.num
+    }
+
+    total = getTotal(product)
+    console.log(`总价格:${total}`)
+
+    product.num=3
+    // total = getTotal(product)
+    console.log(`总价格:${total}`)
+</script>
+</body>
+</html>

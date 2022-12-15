@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+    <view>商品的单价：{{product.price}}</view>
+    <view>商品的数量：{{product.num}}</view>
+    <view>商品的总价格：{{product.price * product.num}}</view>
+    <button type="primary" bindtap="onAddNum">num++</button>
+    <!--  事件传参-->
+    <button type="primary" bindtap="onAddNumN" data-step="5">num+N</button>
+    <view>
+        <input class="num-input" type="number" value="{{product.num}}" bind:input="onInput"></input>
+    </view>
+</view>
