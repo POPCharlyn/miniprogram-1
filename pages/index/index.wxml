@@ -9,4 +9,14 @@
     <view>
         <input class="num-input" type="number" value="{{product.num}}" bind:input="onInput"></input>
     </view>
+    <view>
+        <text wx:if="{{product.price *product.num<=100}}">below 100</text>
+        <text wx:elif="{{product.price *product.num>100&&product.price *product.num<=1000}}">between 100 and 1000</text>
+        <text wx:else>above 1000</text>
+    </view>
+    <view>
+        <text hidden="{{!(product.price *product.num<=100)}}">hidden below 100</text>
+        <text hidden="{{!(product.price *product.num>100&&product.price *product.num<=100)}}">hidden between 100 and 1000</text>
+        <text hidden="{{!(product.price *product.num>1000)}}">hidden above 1000</text>
+    </view>
 </view>
